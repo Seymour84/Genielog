@@ -47,5 +47,6 @@ public:
     OperationC operator *(OperationC);
     void afficher();
    void  ecriture();
+	OperationC transpo();
 };
 #endif

@@ -149,6 +149,27 @@ OperationC OperationC::operator *(OperationC A){
 
 }
 
+OperationC OperationC:: transpo()
+{
+	OperationC X(dimension);
+	for (int i=0; i<dimension;i++)
+	{
+		for(int j=0; j<dimension;j++)
+		{
+			clematcreuse c;
+			c.x=i;
+			c.y=j;
+			
+			X.matcreuse[creer_clematcreuse(j,i)]=matcreuse[c];
+
+			
+		}	
+	}
+				
+	return X;
+
+}
+
 /**
         * \fn operator<<
         * \param A 

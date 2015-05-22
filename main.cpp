@@ -9,10 +9,16 @@ int main(){
     int dim;
     cout<<"Dimension matrice:"<<endl;
     cin>>dim;
-    OperationC a(dim, "matrice.txt");
-	a.ecriture();
-  OperationM b(dim, "matrice.txt");
-	b.ecriture();
-    cout << a << endl;
+	OperationC c(dim);
+    	OperationC a(dim);
+	OperationC b(dim);
+	OperationC d(dim);
+	cout<< c <<endl;
+	a=c.transpo();
+	cout<< a <<endl;
+  	b=(c*a);
+	d=b*b;
+d.ecriture();
+cout << d <<endl;
     return 0;
 }
