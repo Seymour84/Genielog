@@ -1,5 +1,11 @@
-#include <time.h>
-#include"operationM.h"
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+
+#include "operationM.h"
+
+using namespace std;
 
 matrice::matrice(){
     dimension=0;
@@ -8,7 +14,7 @@ matrice::matrice(){
 
 matrice::matrice(int dim,string text){
     dimension=dim;
-    ifstream matr("matrice.txt");
+    ifstream matr(text.c_str());
 
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
