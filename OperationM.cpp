@@ -7,12 +7,12 @@
 
 using namespace std;
 
-matrice::matrice(){
+OperationM::OperationM(){
     dimension=0;
 
 }
 
-matrice::matrice(int dim,string text){
+OperationM::OperationM(int dim,string text){
     dimension=dim;
     ifstream matr(text.c_str());
 
@@ -25,7 +25,7 @@ matrice::matrice(int dim,string text){
 
 
 }
-matrice::matrice(int dim){
+OperationM::OperationM(int dim){
     dimension=dim;
     srand(time(NULL));
 
@@ -36,7 +36,7 @@ matrice::matrice(int dim){
     }
 }
 
-void matrice::afficher(){
+void OperationM::afficher(){
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
             cout<<" "<<mat[i][j]<<" ";
@@ -45,8 +45,8 @@ void matrice::afficher(){
 }
 
 
-matrice matrice::operator +(matrice A){
-    matrice X(dimension,"matrice.txt");
+OperationM OperationM::operator +(OperationM A){
+    OperationM X(dimension,"OperationM.txt");
 
      for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
@@ -56,8 +56,8 @@ matrice matrice::operator +(matrice A){
     return X;
 
 }
-matrice matrice::operator -(matrice A){
-    matrice X(dimension,"matrice.txt");
+OperationM OperationM::operator -(OperationM A){
+    OperationM X(dimension,"OperationM.txt");
 
      for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
@@ -68,8 +68,8 @@ matrice matrice::operator -(matrice A){
 
 }
 
-matrice matrice::operator *(matrice A){
-    matrice X(dimension,"matrice.txt");
+OperationM OperationM::operator *(OperationM A){
+    OperationM X(dimension,"OperationM.txt");
     int k=0;
     X=X-X;
     for(int i=0;i<dimension;i++){
@@ -90,7 +90,7 @@ matrice matrice::operator *(matrice A){
 }
 
 
-ostream& operator<<(ostream &out,matrice& A)
+ostream& operator<<(ostream &out,OperationM& A)
 {
 
   for(int i=0;i<A.dimension;i++){

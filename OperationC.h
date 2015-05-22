@@ -2,11 +2,18 @@
 #define __operationC_h__
 
 #include <map>
+
+/**
+ * \cond HIDDEN_SYMBOLS
+ */
 struct clematcreuse
 {
     int x;
     int y;
 };
+/**
+ * \endcond
+ */
 
 class OperationC
 {

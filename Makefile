@@ -1,5 +1,8 @@
 lib: libOpe_Matrice.a
 test: Ope_Matrice_Test
+doc:
+	doxygen Doxyfile
+
 
 libOpe_Matrice.a: OperationM.o OperationC.o
 	ar rv libOpe_Matrice.a OperationM.o OperationC.o
@@ -19,3 +22,6 @@ clean:
 
 cleanall: clean
 	rm -f libOpe_Matrice.a Ope_Matrice_Test
+	rm -rf doc
+
+.PHONY: doc

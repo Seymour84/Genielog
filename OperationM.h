@@ -2,19 +2,19 @@
 #define __operationM_h__
 
 const int N=999;
-class matrice
+class OperationM
 {
     private:
     int dimension;
-    friend std::ostream& operator << (std::ostream& O, matrice& B);
+    friend std::ostream& operator << (std::ostream& O, OperationM& B);
     int mat[N][N];
     public:
-    matrice();
-    matrice(int);
-    matrice(int,std::string);
-    matrice operator +(matrice);
-    matrice operator -(matrice);
-    matrice operator *(matrice);
+    OperationM();
+    OperationM(int);
+    OperationM(int,std::string);
+    OperationM operator +(OperationM);
+    OperationM operator -(OperationM);
+    OperationM operator *(OperationM);
     void afficher();
 };
 
