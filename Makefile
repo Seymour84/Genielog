@@ -1,8 +1,8 @@
 lib: libOpe_Matrice.a
 test: Ope_Matrice_Test
 
-libOpe_Matrice.a: OperationM.o
-	ar rv libOpe_Matrice.a OperationM.o
+libOpe_Matrice.a: OperationM.o OperationC.o
+	ar rv libOpe_Matrice.a OperationM.o OperationC.o
 
 OperationM.o: OperationM.cpp OperationM.h
 	$(CXX) -W -Wall OperationM.cpp -c -o OperationM.o

@@ -36,15 +36,6 @@ matrice::matrice(int dim){
     }
 }
 
-matrice::~matrice(){
-    for(int i=dimension;i<0;i++){
-        for(int j=dimension;j<0;j++){
-            delete[] &mat[i][j];
-        }
-
-    }
-}
-
 void matrice::afficher(){
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){

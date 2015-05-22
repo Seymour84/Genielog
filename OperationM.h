@@ -12,7 +12,6 @@ class matrice
     matrice();
     matrice(int);
     matrice(int,std::string);
-    ~matrice();
     matrice operator +(matrice);
     matrice operator -(matrice);
     matrice operator *(matrice);
