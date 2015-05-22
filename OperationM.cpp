@@ -36,6 +36,11 @@ OperationM::OperationM(int dim){
     }
 }
 
+/**
+        * \fn afficher
+        * \brief Affichage de la matrice
+        
+    */
 void OperationM::afficher(){
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
@@ -44,6 +49,12 @@ void OperationM::afficher(){
     }
 }
 
+/**
+        * \fn operator +
+        * \param A 
+        * \brief Surcharge de l'opérateur plus 
+       
+    */
 
 OperationM OperationM::operator +(OperationM A){
     OperationM X(dimension,"OperationM.txt");
@@ -56,6 +67,13 @@ OperationM OperationM::operator +(OperationM A){
     return X;
 
 }
+
+/**
+        * \fn operator -
+        * \param A 
+        * \brief Surchage de l'opérateur moins
+        
+    */
 OperationM OperationM::operator -(OperationM A){
     OperationM X(dimension,"OperationM.txt");
 
@@ -67,7 +85,12 @@ OperationM OperationM::operator -(OperationM A){
     return X;
 
 }
-
+/**
+        * \fn operator *
+        * \param A 
+        * \brief Surchage de l'opérateur multiplier
+        
+    */
 OperationM OperationM::operator *(OperationM A){
     OperationM X(dimension,"OperationM.txt");
     int k=0;
@@ -88,7 +111,13 @@ OperationM OperationM::operator *(OperationM A){
 
 
 }
-
+/**
+        * \fn operator<<
+        * \param A 
+        * \param out
+        * \brief Surchage de sortie
+        
+    */
 
 ostream& operator<<(ostream &out,OperationM& A)
 {
@@ -100,4 +129,36 @@ ostream& operator<<(ostream &out,OperationM& A)
     }
   return out;
 }
+/**
+        * \fn ecriture
+        * \brief Ecriture dans un fichier ( resultat.txt)
+        
+    */
 
+void OperationM:: ecriture()
+{
+	 ofstream fichier("resultat.txt", ios::out | ios::trunc);  //déclaration du flux et ouverture du fichier
+        
+        if(fichier)  // si l'ouverture a réussi
+        {
+            	for(int i=0;i<dimension;i++)
+		{
+		
+        		for(int j=0;j<dimension;j++)
+			{
+             		fichier<<" "<<mat[i][j]<<" ";
+        		}
+
+			fichier<<endl;
+   		 }
+                fichier.close();  // on referme le fichier
+        }
+        else  // sinon
+                cerr << "Erreur à l'ouverture !" << endl;
+ 
+
+
+
+
+
+}

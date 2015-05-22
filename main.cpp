@@ -10,8 +10,9 @@ int main(){
     cout<<"Dimension matrice:"<<endl;
     cin>>dim;
     OperationC a(dim, "matrice.txt");
-
-
+	a.ecriture();
+  OperationM b(dim, "matrice.txt");
+	b.ecriture();
     cout << a << endl;
     return 0;
 }

@@ -16,6 +16,7 @@ class OperationM
     OperationM operator -(OperationM);
     OperationM operator *(OperationM);
     void afficher();
+     void ecriture();
 };
 
 #endif

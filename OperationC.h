@@ -46,5 +46,6 @@ public:
     OperationC operator -(OperationC);
     OperationC operator *(OperationC);
     void afficher();
+   void  ecriture();
 };
 #endif
