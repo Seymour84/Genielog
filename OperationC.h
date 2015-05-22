@@ -1,13 +1,13 @@
 #ifndef __operationC_h__
 #define __operationC_h__
 
-
+#include <map>
 struct clematcreuse
 {
     int x;
     int y;
 };
-    
+
 class OperationC
 {
 

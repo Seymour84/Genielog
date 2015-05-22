@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "OperationM.h"
+#include "OperationC.h"
 
 using namespace std;
 
@@ -8,7 +9,7 @@ int main(){
     int dim;
     cout<<"Dimension matrice:"<<endl;
     cin>>dim;
-    matrice a(dim, "matrice.txt");
+    OperationC a(dim, "matrice.txt");
 
 
     cout << a << endl;

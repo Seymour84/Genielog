@@ -10,11 +10,11 @@ using namespace std;
 
 clematcreuse OperationC::creer_clematcreuse(int x, int y)
 {
-	clematcreuse c;
-	c.x = x;
-	c.y = y;
+    clematcreuse c;
+    c.x = x;
+    c.y = y;
 
-	return c;
+    return c;
 } 
 
 OperationC::OperationC(){
@@ -29,10 +29,15 @@ OperationC::OperationC(int dim,string text){
 
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
-        	clematcreuse k;
-        	k.x = i;
-        	k.y = j;
-            matr>>matcreuse[k];
+            int v;
+            clematcreuse k;
+            k.x = i;
+            k.y = j;
+            if (matr>>v) {
+                if (v != 0) {
+                    matcreuse[k] = v;
+                }
+            }
         }
     }
     matr.close();
@@ -45,10 +50,13 @@ OperationC::OperationC(int dim){
 
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
-        	clematcreuse k;
-        	k.x = i;
-        	k.y = j;
-           	matcreuse[k]=rand()%10;
+            clematcreuse k;
+            k.x = i;
+            k.y = j;
+            int v=rand()%10;
+            if (v != 0) {
+                matcreuse[k] = v;
+            }
         }
     }
 }
@@ -113,9 +121,9 @@ ostream& operator<<(ostream &out,OperationC& A)
 
   for(int i=0;i<A.dimension;i++){
         for(int j=0;j<A.dimension;j++){
-        	clematcreuse c;
-        	c.x = i;
-        	c.y = j;
+            clematcreuse c;
+            c.x = i;
+            c.y = j;
              out<<" "<<A.matcreuse[c]<<" ";
         }out<<endl;
     }
