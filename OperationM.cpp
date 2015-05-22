@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "operationM.h"
+#include "OperationM.h"
 
 using namespace std;
 

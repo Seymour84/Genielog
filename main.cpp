@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "OperationM.cpp"
+#include "OperationM.h"
 
 using namespace std;
 
