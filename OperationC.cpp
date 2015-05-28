@@ -57,15 +57,23 @@ OperationC::OperationC(int dim,string text){
 OperationC::OperationC(int dim){
     dimension=dim;
     srand(time(NULL));
-
+    int valeur=0;
     for(int i=0;i<dimension;i++){
         for(int j=0;j<dimension;j++){
             clematcreuse k;
             k.x = i;
             k.y = j;
             int v=rand()%10;
-            if (v != 0) {
-                matcreuse[k] = v;
+            int compteur=(dimension*dimension)*0.01;
+            
+            if(valeur==compteur)
+            {
+                if (v != 0) {
+                    matcreuse[k] = v;
+                    valeur=0;
+                }
+            }else{
+                valeur++;
             }
         }
     }
@@ -165,6 +173,16 @@ OperationC OperationC:: transpo()
 			
 		}	
 	}
+				
+	return X;
+
+}
+OperationC OperationC:: carre(OperationC Y)
+{
+    OperationC X(dimension);
+	
+    
+    X=Y*Y;
 				
 	return X;
 

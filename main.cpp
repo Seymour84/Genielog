@@ -10,15 +10,11 @@ int main(){
     cout<<"Dimension matrice:"<<endl;
     cin>>dim;
 	OperationC c(dim);
-    	OperationC a(dim);
-	OperationC b(dim);
-	OperationC d(dim);
-	cout<< c <<endl;
-	a=c.transpo();
-	cout<< a <<endl;
-  	b=(c*a);
-	d=b*b;
-d.ecriture();
-cout << d <<endl;
+    OperationC a(dim);
+
+  	a=c.carre((c+c.transpo()));
+	
+a.ecriture();
+cout << a <<endl;
     return 0;
 }

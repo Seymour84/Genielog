@@ -3,17 +3,14 @@
 
 #include <map>
 
-/**
- * \cond HIDDEN_SYMBOLS
- */
 struct clematcreuse
 {
     int x;
     int y;
 };
-/**
+/*!
  * \endcond
- */
+*/
 
 class OperationC
 {
@@ -48,5 +45,6 @@ public:
     void afficher();
    void  ecriture();
 	OperationC transpo();
+    OperationC carre(OperationC Y);
 };
 #endif
