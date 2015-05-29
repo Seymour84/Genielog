@@ -13,7 +13,8 @@ int main(){
     OperationC a(dim);
 
   	a=c.carre((c+c.transpo()));
-	
+	//a=c*c;
+	//a=c+c;
 a.ecriture();
 cout << a <<endl;
     return 0;

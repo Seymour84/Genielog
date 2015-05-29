@@ -81,7 +81,7 @@ OperationC::OperationC(int dim){
 /**
         * \fn afficher
         * \brief Affichage de la matrice
-        
+        *
     */
 
 void OperationC::afficher(){
@@ -97,7 +97,7 @@ void OperationC::afficher(){
         * \fn operator +
         * \param A 
         * \brief Surcharge de l'opérateur plus 
-       
+       *
     */
 OperationC OperationC::operator +(OperationC A){
     OperationC X(dimension,text.c_str());
@@ -115,7 +115,7 @@ OperationC OperationC::operator +(OperationC A){
         * \fn operator -
         * \param A 
         * \brief Surchage de l'opérateur moins
-        
+        *
     */
 OperationC OperationC::operator -(OperationC A){
     OperationC X(dimension,text.c_str());
@@ -133,7 +133,7 @@ OperationC OperationC::operator -(OperationC A){
         * \fn operator *
         * \param A 
         * \brief Surchage de l'opérateur multiplier
-        
+        *
     */
 
 OperationC OperationC::operator *(OperationC A){
@@ -193,7 +193,7 @@ OperationC OperationC:: carre(OperationC Y)
         * \param A 
         * \param out
         * \brief Surchage de sortie
-        
+        *
     */
 ostream& operator<<(ostream &out,OperationC& A)
 {
@@ -212,7 +212,7 @@ ostream& operator<<(ostream &out,OperationC& A)
 /**
         * \fn ecriture
         * \brief Ecriture dans un fichier ( resultatMC.txt)
-        
+        *
     */
 void OperationC:: ecriture()
 {

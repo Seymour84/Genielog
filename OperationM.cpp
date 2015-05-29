@@ -39,7 +39,7 @@ OperationM::OperationM(int dim){
 /*!
         * \fn afficher
         * \brief Affichage de la matrice
-        
+        *
 */
 void OperationM::afficher(){
     for(int i=0;i<dimension;i++){
@@ -53,7 +53,7 @@ void OperationM::afficher(){
         * \fn operator +
         * \param A 
         * \brief Surcharge de l'opérateur plus 
-       
+       *
 */
 
 OperationM OperationM::operator +(OperationM A){
@@ -72,7 +72,7 @@ OperationM OperationM::operator +(OperationM A){
         * \fn operator -
         * \param A 
         * \brief Surchage de l'opérateur moins
-        
+        *
 */
 OperationM OperationM::operator -(OperationM A){
     OperationM X(dimension,"OperationM.txt");
@@ -89,7 +89,7 @@ OperationM OperationM::operator -(OperationM A){
         * \fn operator *
         * \param A 
         * \brief Surchage de l'opérateur multiplier
-        
+        *
 */
 OperationM OperationM::operator *(OperationM A){
     OperationM X(dimension,"OperationM.txt");
@@ -116,7 +116,7 @@ OperationM OperationM::operator *(OperationM A){
         * \param A 
         * \param out
         * \brief Surchage de sortie
-        
+        *
 */
 
 ostream& operator<<(ostream &out,OperationM& A)
@@ -132,7 +132,7 @@ ostream& operator<<(ostream &out,OperationM& A)
 /*!
         * \fn ecriture
         * \brief Ecriture dans un fichier ( resultat.txt)
-        
+        *
 */
 
 void OperationM:: ecriture()
